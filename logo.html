@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bikedle - Devinez la Marque</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>Bikedle - Devinez la Marque</h2>
+    
+        <a href="index.html">Devine la moto</a>
+        <a href="logo.html">Devine la marque</a>
+    
+    </header>
+
+
+    <div class="game-container">
+        <button id="toggle-music-btn" title="Activer/Désactiver la musique">
+            <audio id="ambient-sound" loop>
+                <source src="soundtrack/ambiance.mp3" type="audio/mpeg">    
+            </audio>
+        </button>
+
+        <audio id="good-answer-sound">
+            <source src="soundtrack/reussit.mp3" type="audio/mpeg">
+        </audio>
+        
+        <audio id="wrong-answer-sound">
+            <source src="soundtrack/error.mp3" type="audio/mpeg">
+        </audio>
+        
+            
+        <div id="guess-moto-container" class="game-container">
+            <!-- Contenu du jeu "Deviner la Moto" -->
+            <h1>Bikedle</h1>
+            <p>Devinez la marque en utilisant les indices visuels.</p>
+            <div id="image-container">
+                <img id="moto-image" src="" alt="logo Image" style="filter: blur(10px); transition: filter 5s linear;">
+            </div>
+            <input id="guess-input" type="text" placeholder="Entrez le nom de la moto">
+            <button id="submit-btn">Valider</button>
+            <div id="feedback"></div>
+            <p>Essais restants : <span id="remaining-attempts"></span></p>
+            <div id="timer">30</div>
+            <button id="next-btn" style="display: none;">Suivant</button>
+        </div>
+
+    </div>
+    <footer>
+        <p fs-hacks-element="year">&copy; 2024</p>
+        <p>Tous droits reserves.</p>
+    </footer>
+
+    
+
+    <script src="logo.js"></script>
+</body>
+</html>
